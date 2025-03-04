@@ -1,0 +1,46 @@
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Временные файлы и кэш
+.cache/
+*.log
+*.tmp
+tmp/
+temp/
+
+# Файлы истории и конфигурации
+.bash_history
+.wget-hsts
+.ssh/
+
+# Архивы и бинарные файлы
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.so
+*.dll
+*.exe
+
+
+
+# Директории IDE и редакторов
+.vscode/
+.idea/
+.cursor-server/
+
+# Зависимости и сборки
+node_modules/
+dist/
+build/
+target/
+
+# Файлы окружения
+.env
+.env.*
+!.env.example
+
+# Другие специфичные файлы
+kubo_v0.22.0_linux-amd64.tar.gz 
