@@ -107,3 +107,74 @@
 08:12:14.221022 db@janitor F·7 G·1
 08:12:14.221063 db@janitor removing table-18
 08:12:14.221175 db@open done T·42.732419ms
+=============== Mar 4, 2025 (UTC) ===============
+09:05:05.828651 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:05:05.833550 version@stat F·[1 3] S·5MiB[868KiB 4MiB] Sc·[0.25 0.05]
+09:05:05.833634 db@open opening
+09:05:05.833795 journal@recovery F·1
+09:05:05.849544 journal@recovery recovering @25
+09:05:06.340620 memdb@flush created L0@27 N·19200 S·2MiB "/F5..AMA,v43355":"/pr..L5G,v60337"
+09:05:06.351523 version@stat F·[2 3] S·8MiB[3MiB 4MiB] Sc·[0.50 0.05]
+09:05:06.406263 db@janitor F·7 G·0
+09:05:06.406465 db@open done T·572.765404ms
+=============== Mar 4, 2025 (UTC) ===============
+09:24:11.437911 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:24:11.446019 version@stat F·[2 3] S·8MiB[3MiB 4MiB] Sc·[0.50 0.05]
+09:24:11.446099 db@open opening
+09:24:11.446995 journal@recovery F·1
+09:24:11.459960 journal@recovery recovering @28
+09:24:11.470068 memdb@flush created L0@30 N·595 S·87KiB "/F5..AMA,v62571":"/pr..DHA,v62598"
+09:24:11.471170 version@stat F·[3 3] S·8MiB[3MiB 4MiB] Sc·[0.75 0.05]
+09:24:11.479543 db@janitor F·8 G·0
+09:24:11.479585 db@open done T·33.461473ms
+09:30:16.638228 db@close closing
+09:30:16.642446 db@close done T·3.930537ms
+=============== Mar 4, 2025 (UTC) ===============
+09:30:31.232092 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:30:31.234672 version@stat F·[3 3] S·8MiB[3MiB 4MiB] Sc·[0.75 0.05]
+09:30:31.234715 db@open opening
+09:30:31.234818 journal@recovery F·1
+09:30:31.235269 journal@recovery recovering @31
+09:30:31.241753 memdb@flush created L0@33 N·780 S·109KiB "/F5..AMA,v63143":"/pr..KWM,v63246"
+09:30:31.244015 version@stat F·[4 3] S·8MiB[3MiB 4MiB] Sc·[1.00 0.05]
+09:30:31.258331 db@janitor F·9 G·0
+09:30:31.258387 db@open done T·23.645758ms
+09:30:31.259978 table@compaction L0·4 -> L1·3 S·8MiB Q·63880
+09:30:31.264975 db@close closing
+09:30:31.269108 db@close done T·4.128277ms
+=============== Mar 4, 2025 (UTC) ===============
+09:30:31.367054 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:30:31.367413 version@stat F·[4 3] S·8MiB[3MiB 4MiB] Sc·[1.00 0.05]
+09:30:31.367441 db@open opening
+09:30:31.367536 journal@recovery F·1
+09:30:31.382042 journal@recovery recovering @34
+09:30:31.383225 version@stat F·[4 3] S·8MiB[3MiB 4MiB] Sc·[1.00 0.05]
+09:30:31.390486 db@janitor F·9 G·0
+09:30:31.390623 db@open done T·23.171415ms
+09:30:31.400103 db@close closing
+09:30:31.400418 db@close done T·323.901µs
+=============== Mar 4, 2025 (UTC) ===============
+09:30:31.481871 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:30:31.482321 version@stat F·[4 3] S·8MiB[3MiB 4MiB] Sc·[1.00 0.05]
+09:30:31.482357 db@open opening
+09:30:31.482483 journal@recovery F·1
+09:30:31.487424 journal@recovery recovering @36
+09:30:31.489714 version@stat F·[4 3] S·8MiB[3MiB 4MiB] Sc·[1.00 0.05]
+09:30:31.496133 db@janitor F·9 G·0
+09:30:31.496179 db@open done T·13.808566ms
+09:30:31.499920 db@close closing
+09:30:31.500024 db@close done T·101.11µs
+=============== Mar 4, 2025 (UTC) ===============
+09:30:39.946966 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:30:39.947309 version@stat F·[4 3] S·8MiB[3MiB 4MiB] Sc·[1.00 0.05]
+09:30:39.947349 db@open opening
+09:30:39.947463 journal@recovery F·1
+09:30:39.954906 journal@recovery recovering @38
+09:30:39.955785 version@stat F·[4 3] S·8MiB[3MiB 4MiB] Sc·[1.00 0.05]
+09:30:39.964733 db@janitor F·9 G·0
+09:30:39.964788 db@open done T·17.423333ms
+09:30:39.967840 table@compaction L0·4 -> L1·3 S·8MiB Q·63880
+09:30:39.974422 db@close closing
+09:30:40.044196 table@build created L1@42 N·15732 S·2MiB "/F5..LOY,v41503":"/pr..7DW,v53639"
+09:30:40.044272 table@build revert @42
+09:30:40.045401 db@close done T·70.981573ms
