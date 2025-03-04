@@ -1,12 +1,21 @@
 {
   "API": {
-    "HTTPHeaders": {}
+    "HTTPHeaders": {
+      "Access-Control-Allow-Methods": [
+        "PUT",
+        "POST",
+        "GET"
+      ],
+      "Access-Control-Allow-Origin": [
+        "*"
+      ]
+    }
   },
   "Addresses": {
-    "API": "/ip4/127.0.0.1/tcp/5001",
+    "API": "/ip4/0.0.0.0/tcp/5001",
     "Announce": [],
     "AppendAnnounce": [],
-    "Gateway": "/ip4/127.0.0.1/tcp/8080",
+    "Gateway": "/ip4/0.0.0.0/tcp/8080",
     "NoAnnounce": [],
     "Swarm": [
       "/ip4/0.0.0.0/tcp/4001",
@@ -55,7 +64,7 @@
       "type": "mount"
     },
     "StorageGCWatermark": 90,
-    "StorageMax": "1GB"
+    "StorageMax": "10GB"
   },
   "Discovery": {
     "MDNS": {
@@ -63,7 +72,7 @@
     }
   },
   "Experimental": {
-    "FilestoreEnabled": true,
+    "FilestoreEnabled": false,
     "GraphsyncEnabled": false,
     "Libp2pStreamMounting": false,
     "OptimisticProvide": false,
@@ -83,8 +92,8 @@
     "RootRedirect": ""
   },
   "Identity": {
-    "PeerID": "12D3KooWFRxSEet88HMUKsyd3iJdXKrkEQsX3KrAd5aFCA9gKFDW",
-    "PrivKey": "CAESQO6n8HKtcxU6PwLstAR3wxur5M1Tk7N77jAgr5QDLij4U2iCRhrbaJO2IlCPCeuW+0jXaEBqxMwMS6Uq75ucb80="
+    "PeerID": "12D3KooWBp3RZWNgwCsbP93saEPgQUgi1NkKpZf6LHGNgUr2uWzb",
+    "PrivKey": "CAESQPOBN4Ed+ywMtb8+QQb490o3gbSPjZIY6AsE9IyR8wwrHaIt6P/48osSrulw7KAY+buw4RQaBWBtKObgzGBVcDA="
   },
   "Internal": {},
   "Ipns": {
@@ -117,9 +126,7 @@
     "DisableSigning": false,
     "Router": ""
   },
-  "Reprovider": {
-    "Strategy": "roots"
-  },
+  "Reprovider": {},
   "Routing": {
     "AcceleratedDHTClient": false,
     "Methods": null,
