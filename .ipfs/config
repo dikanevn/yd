@@ -93,7 +93,7 @@
     "DeserializedResponses": null,
     "HTTPHeaders": {},
     "NoDNSLink": false,
-    "NoFetch": false,
+    "NoFetch": true,
     "PathPrefixes": [],
     "PublicGateways": null,
     "RootRedirect": ""
