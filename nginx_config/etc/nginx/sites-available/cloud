@@ -1,0 +1,60 @@
+server {
+    listen 80;
+    server_name cloud.y-d-x.xyz;
+
+    # Перенаправление HTTP на HTTPS
+    location / {
+        return 301 https://$host$request_uri;
+    }
+
+    # Маршрут для PNG-файлов
+    location /png/ {
+        alias /root/yd/png/;
+        expires 1h;
+        add_header Cache-Control "public, max-age=3600";
+        add_header Access-Control-Allow-Origin "*";
+        types {
+            image/png png;
+        }
+        try_files $uri =404;
+    }
+
+    # Основной маршрут для IPFS
+    location /ipfs/ {
+        proxy_pass http://localhost:8080/ipfs/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        
+        # Увеличиваем таймауты для больших файлов
+        proxy_read_timeout 600;
+        proxy_connect_timeout 600;
+        proxy_send_timeout 600;
+        
+        # Кэширование
+        proxy_cache_valid 200 302 60m;
+        proxy_cache_valid 404 1m;
+    }
+
+    # Корневой маршрут перенаправляет на /ipfs/
+    location = / {
+        return 302 /ipfs/;
+    }
+
+    # Для доступа к API IPFS (опционально)
+    location /api/ {
+        proxy_pass http://localhost:5001/api/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/cloud.yapster-dimensions.xyz/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/cloud.yapster-dimensions.xyz/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+} 
