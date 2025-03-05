@@ -76,12 +76,13 @@
     }
   },
   "Experimental": {
-    "FilestoreEnabled": false,
+    "FilestoreEnabled": true,
     "Libp2pStreamMounting": false,
     "OptimisticProvide": false,
     "OptimisticProvideJobsPoolSize": 0,
     "P2pHttpProxy": false,
-    "StrategicProviding": false,
+    "ShardingEnabled": true,
+    "StrategicProviding": true,
     "UrlstoreEnabled": false
   },
   "Gateway": {
