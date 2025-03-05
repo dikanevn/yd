@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "NODE_OPTIONS=\"--loader ts-node/esm\" node --experimental-specifier-resolution=node u1.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}
