@@ -81,7 +81,7 @@
     "OptimisticProvide": false,
     "OptimisticProvideJobsPoolSize": 0,
     "P2pHttpProxy": false,
-    "ShardingEnabled": true,
+    "ShardingEnabled": null,
     "StrategicProviding": true,
     "UrlstoreEnabled": false
   },
