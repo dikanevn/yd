@@ -1,10 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-// Получаем текущую директорию в ESM
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import * as fs from 'fs';
+import * as path from 'path';
 
 // Функция для создания метаданных NFT
 function createNftMetadata(index: number): any {
@@ -17,7 +12,7 @@ function createNftMetadata(index: number): any {
 
 // Основная функция
 async function main() {
-  const uriDir = path.join(__dirname, 'uri');
+  const uriDir = path.join(process.cwd(), 'uri');
   
   // Создаем директорию uri, если она не существует
   if (!fs.existsSync(uriDir)) {
