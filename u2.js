@@ -22,7 +22,7 @@ async function main() {
   const imageData = fs.readFileSync(sourceImagePath);
   
   // Копируем файл с номерами от 1 до 10
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 0; i <= 3000; i++) {
     const destFilePath = path.join(pngDir, `${i}.png`);
     fs.writeFileSync(destFilePath, imageData);
     console.log(`Создан файл изображения: ${destFilePath}`);

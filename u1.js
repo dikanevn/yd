@@ -11,7 +11,7 @@ function createNftMetadata(index) {
   return {
     name: `Yapster Dimensions #${index}`,
     symbol: `YAPDIM`,
-    image: `https://46.8.232.55/png/${index}.png`
+    image: `https://yapster-dimensions.xyz/png/${index}.png`
   };
 }
 
@@ -26,7 +26,7 @@ async function main() {
   }
   
   // Генерируем 100 файлов метаданных
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 0; i <= 3000; i++) {
     const metadata = createNftMetadata(i);
     const filePath = path.join(uriDir, `${i}.json`);
     

@@ -8,12 +8,21 @@ server {
     
     server_name _;
     
-    # Маршрут для доступа к изображениям только через /png/
+    # Маршрут для доступа к изображениям через /png/
     location /png/ {
         alias /root/yd/png/;
         add_header Cache-Control "public, max-age=3600";
         add_header Access-Control-Allow-Origin "*";
         expires 1h;
+    }
+    
+    # Маршрут для доступа к JSON файлам через /uri/
+    location /uri/ {
+        alias /root/yd/uri/;
+        add_header Cache-Control "public, max-age=3600";
+        add_header Access-Control-Allow-Origin "*";
+        expires 1h;
+        default_type application/json;
     }
     
     # Маршрут для статических файлов
